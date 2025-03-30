@@ -74,11 +74,13 @@ validation_agent = autogen.AssistantAgent(
     name="validation_agent",
     llm_config=llm_config,
     system_message="""
-    You are a validation expert. You will receive weather information and city details, 
-    and determine if they are accurate and comprehensive. 
-    A valid output should have a weather description, temperature, 
-    and at least 100 characters of city information. 
-    If the information is satisfactory, return a JSON object containing the weather and city info. 
+    You are a validation expert. You will receive weather information and city details,
+    and determine if they are accurate and comprehensive.
+    A valid output should have a weather description, temperature,
+    and at least 100 characters of city information.
+    If the information is satisfactory, return a JSON object with two keys:
+    1. weather -> weather details
+    2. city_details -> city details.
     If the information is not satisfactory, return 'None'.
     """,
 )
