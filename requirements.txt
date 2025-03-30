@@ -5,3 +5,4 @@ google-generativeai
 autogen
 pandas
 dotenv
+ag2[gemini]
